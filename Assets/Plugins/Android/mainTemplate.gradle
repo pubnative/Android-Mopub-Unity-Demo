@@ -5,7 +5,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
     implementation 'com.google.android.gms:play-services-ads:22.6.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:7
-    implementation 'com.google.android.ump:user-messaging-platform:2.1.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
+    implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
+    implementation 'net.pubnative:hybid.sdk:2.21.0-development_publish_artifactory.14565'
+     // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
 // Android Resolver Dependencies End
 **DEPS**}
 
@@ -23,7 +25,7 @@ android {
 android {
     ndkPath "**NDKPATH**"
 
-    compileSdkVersion **APIVERSION**
+    compileSdk 34
     buildToolsVersion '**BUILDTOOLS**'
 
     compileOptions {
@@ -32,8 +34,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion **MINSDKVERSION**
-        targetSdkVersion **TARGETSDKVERSION**
+        minSdk 22
+        targetSdk 34
         ndk {
             abiFilters **ABIFILTERS**
         }
