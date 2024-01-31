@@ -1,17 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - GoogleMobileAdsDemoScript
-    GoogleMobileAds.Common.dll:
-    - GoogleMobileAds.Common.MobileAdsEventExecutor
+    - Banner
+    - Interstitial
+    - Rewarded
     GoogleMobileAds.Editor:
-    - GoogleMobileAds.Editor.GoogleMobileAdsSettings
-    GoogleMobileAds.Editor.dll:
     - GoogleMobileAds.Editor.GoogleMobileAdsSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -41,9 +37,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 23092}
+      Script: {instanceID: 23094}
     - Class: 114
-      Script: {instanceID: 25278}
+      Script: {instanceID: 25338}
+    - Class: 114
+      Script: {instanceID: 25346}
+    - Class: 114
+      Script: {instanceID: 25356}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -887,11 +887,23 @@ ScriptsOnlyBuild:
     className: MobileAdsEventExecutor
   - hash:
       serializedVersion: 2
-      Hash: f41152e3ae78c695094a4609ff5fee1d
+      Hash: a6e3e6a67fd6943486c7c599e1c94fc7
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: GoogleMobileAdsDemoScript
+    className: Banner
+  - hash:
+      serializedVersion: 2
+      Hash: 62a3e93c114559b74eadd34ab59ff47d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Interstitial
+  - hash:
+      serializedVersion: 2
+      Hash: 8b4b39e1b0037ec35853b2eb3267e4cd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Rewarded
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/G1W3WVGH9M/Desktop/admob-hybid-unity-demo
+  playerPath: /Users/G1W3WVGH9M/Desktop/androiddemo/androiddemo2/androiddemo.apk

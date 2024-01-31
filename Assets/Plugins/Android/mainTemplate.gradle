@@ -4,10 +4,10 @@ apply plugin: 'com.android.library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'com.google.android.gms:play-services-ads:22.6.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:7
-    implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
-    implementation 'net.pubnative:hybid.sdk:2.21.0-development_publish_artifactory.14565'
-     // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
+    implementation 'com.google.android.gms:play-services-ads:22.6.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:8
+    implementation 'com.google.android.ump:user-messaging-platform:2.1.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
+    implementation 'net.pubnative:hybid.adapters.admob:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:15
+    implementation 'net.pubnative:hybid.sdk:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:13
 // Android Resolver Dependencies End
 **DEPS**}
 
@@ -25,7 +25,7 @@ android {
 android {
     ndkPath "**NDKPATH**"
 
-    compileSdk 34
+    compileSdkVersion **APIVERSION**
     buildToolsVersion '**BUILDTOOLS**'
 
     compileOptions {
@@ -34,8 +34,8 @@ android {
     }
 
     defaultConfig {
-        minSdk 22
-        targetSdk 34
+        minSdkVersion **MINSDKVERSION**
+        targetSdkVersion **TARGETSDKVERSION**
         ndk {
             abiFilters **ABIFILTERS**
         }
