@@ -24,14 +24,14 @@ public class Banner : MonoBehaviour
 
     public void Start()
     {
-        // create an instance of a banner view first.
-        if (_bannerView != null)
-        {
-            HideBannerAd();
-            _bannerView.Destroy();
-            _bannerView = null;
+        //// create an instance of a banner view first.
+        //if (_bannerView != null)
+        //{
+        //    HideBannerAd();
+        //    _bannerView.Destroy();
+        //    _bannerView = null;
 
-        }
+        //}
 
         // Create a 320x50 banner at top of the screen
         Debug.Log("Creating banner view");
