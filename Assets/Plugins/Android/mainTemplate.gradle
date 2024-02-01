@@ -6,8 +6,8 @@ dependencies {
 // Android Resolver Dependencies Start
     implementation 'com.google.android.gms:play-services-ads:22.6.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:8
     implementation 'com.google.android.ump:user-messaging-platform:2.1.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
-    implementation 'net.pubnative:hybid.adapters.admob:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:15
-    implementation 'net.pubnative:hybid.sdk:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:13
+    implementation 'net.pubnative:hybid.adapters.admob:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:17
+    implementation 'net.pubnative:hybid.sdk:2.21.0' // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:12
 // Android Resolver Dependencies End
 **DEPS**}
 

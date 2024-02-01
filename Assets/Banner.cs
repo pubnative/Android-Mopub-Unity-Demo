@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
 using UnityEngine;
@@ -10,44 +11,44 @@ public class Banner : MonoBehaviour
 #if UNITY_ANDROID
     private string _adUnitId = "ca-app-pub-8741261465579918/6124360926";
 #else
-  private string _adUnitId = "unexpected_platform";
+      private string _adUnitId = "unexpected_platform";
 #endif
 
     BannerView _bannerView;
 
-    private void Awake()
-    {
-        // Initialize the Google Mobile Ads SDK.
-        MobileAds.Initialize(initStatus => { });
-    }
-
 
     public void Start()
     {
-        //// create an instance of a banner view first.
-        //if (_bannerView != null)
-        //{
-        //    HideBannerAd();
-        //    _bannerView.Destroy();
-        //    _bannerView = null;
+        MobileAds.Initialize(initStatus =>
+        {
 
-        //}
+            Dictionary<string, AdapterStatus> map = initStatus.getAdapterStatusMap();
+            foreach (KeyValuePair<string, AdapterStatus> keyValuePair in map)
+            {
+                string className = keyValuePair.Key;
+                AdapterStatus status = keyValuePair.Value;
+                switch (status.InitializationState)
+                {
+                    case AdapterState.NotReady:
+                        // The adapter initialization did not complete.
+                        Debug.Log("Adapter: " + className + " not ready.");
+                        break;
+                    case AdapterState.Ready:
+                        // The adapter was successfully initialized.
+                        Debug.Log("Adapter: " + className + " is initialized.");
+                        break;
+                }
+            }
 
-        // Create a 320x50 banner at top of the screen
-        Debug.Log("Creating banner view");
-        _bannerView = new BannerView(_adUnitId, AdSize.Banner, AdPosition.Top);
-        // create our request used to load the ad.
-        var adRequest = new AdRequest();
-        // send the request to load the ad.
-        Debug.Log("Loading banner ad.");
-        ListenToAdEvents();
-        _bannerView.LoadAd(adRequest);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+            Debug.Log("Creating banner view");
+            _bannerView = new BannerView(_adUnitId, AdSize.Banner, AdPosition.Center);
+            // create our request used to load the ad.
+            var adRequest = new AdRequest();
+            // send the request to load the ad.
+            Debug.Log("Loading banner ad.");
+            ListenToAdEvents();
+            _bannerView.LoadAd(adRequest);
+        });
     }
 
     private void ListenToAdEvents()
@@ -110,5 +111,11 @@ public class Banner : MonoBehaviour
         {
             _bannerView.Hide();
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }

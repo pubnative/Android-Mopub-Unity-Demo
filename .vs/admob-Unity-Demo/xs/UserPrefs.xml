@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{7F948085-957F-C941-F0AD-15D110B4D90E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Banner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Rewarded.cs">
     <Files>
-      <File FileName="Assets/Banner.cs" Line="28" Column="35" />
+      <File FileName="Assets/Banner.cs" Line="51" Column="12" />
+      <File FileName="Assets/Rewarded.cs" Line="78" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="admob-Unity-Demo" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Banner.cs" selected="True" />
+              <Node name="GoogleMobileAds" expanded="True">
+                <Node name="Editor" expanded="True" />
+              </Node>
+              <Node name="Rewarded.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -17,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4e6a9570-024a-4cb1-83a1-17d3312e153d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce6a8a94-9365-4817-a880-22cacb9d5d6a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

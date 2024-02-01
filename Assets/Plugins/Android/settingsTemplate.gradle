@@ -22,7 +22,7 @@ dependencyResolutionManagement {
             url "https://maven.google.com/" // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:8, Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:7
         }
         maven {
-            url "https://verve.jfrog.io/artifactory/verve-gradle-release/" // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:13
+            url "https://verve.jfrog.io/artifactory/verve-gradle-release/" // Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:12, Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml:17
         }
         mavenLocal()
 // Android Resolver Repos End

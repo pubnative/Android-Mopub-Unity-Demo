@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -19,9 +20,30 @@ public class Interstitial : MonoBehaviour
     void Start()
     {
 
-        DestroyInterstitialAd();
+        MobileAds.Initialize(initStatus =>
+        {
+            Dictionary<string, AdapterStatus> map = initStatus.getAdapterStatusMap();
+            foreach (KeyValuePair<string, AdapterStatus> keyValuePair in map)
+            {
+                string className = keyValuePair.Key;
+                AdapterStatus status = keyValuePair.Value;
+                switch (status.InitializationState)
+                {
+                    case AdapterState.NotReady:
+                        // The adapter initialization did not complete.
+                        Debug.Log("Adapter: " + className + " not ready.");
+                        break;
+                    case AdapterState.Ready:
+                        // The adapter was successfully initialized.
+                        Debug.Log("Adapter: " + className + " is initialized.");
+                        break;
+                }
+            }
 
-        LoadInterstitialAd();
+            DestroyInterstitialAd();
+
+            LoadInterstitialAd();
+        });
     }
 
     public void LoadInterstitialAd()
@@ -29,7 +51,6 @@ public class Interstitial : MonoBehaviour
         Debug.Log("Loading the interstitial ad.");
 
         var adRequest = new AdRequest();
-
 
         InterstitialAd.Load(_adUnitId, adRequest,
        (InterstitialAd ad, LoadAdError error) =>
